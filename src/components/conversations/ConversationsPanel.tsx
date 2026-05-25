@@ -103,92 +103,94 @@ export function ConversationsPanel({ section }: ConversationsPanelProps) {
       </header>
 
       {!sectionCollapsed && (
-        <div className="conversations-panel__body">
-          <div className="conversations__subject">
-            {editingSubject ? (
-              <input
-                className="field-input conversations__subject-input"
-                value={subjectDraft}
-                onChange={(e) => setSubjectDraft(e.target.value)}
-                onBlur={saveSubject}
-                onKeyDown={(e) => e.key === 'Enter' && saveSubject()}
-                autoFocus
-              />
-            ) : (
-              <p>{activeRecord.subject}</p>
-            )}
-            <button
-              type="button"
-              className="icon-btn"
-              aria-label="Edit subject"
-              onClick={() => setEditingSubject(true)}
-            >
-              <Pencil size={14} />
-            </button>
-          </div>
-
-          <div className="conversations__thread" ref={threadRef}>
-            {activeRecord.messages.map((msg) =>
-              msg.isChatBubble ? (
-                <div
-                  key={msg.id}
-                  className={`chat-bubble ${msg.isOutgoing ? 'chat-bubble--outgoing' : ''}`}
-                >
-                  {msg.body}
-                </div>
+        <>
+          <div className="conversations-panel__main">
+            <div className="conversations__subject">
+              {editingSubject ? (
+                <input
+                  className="field-input conversations__subject-input"
+                  value={subjectDraft}
+                  onChange={(e) => setSubjectDraft(e.target.value)}
+                  onBlur={saveSubject}
+                  onKeyDown={(e) => e.key === 'Enter' && saveSubject()}
+                  autoFocus
+                />
               ) : (
-                <article
-                  key={msg.id}
-                  className={`message-card ${msg.isOutgoing ? 'message-card--outgoing' : ''}`}
-                >
-                  <header className="message-card__header">
-                    <div>
-                      <strong>{msg.sender}</strong>
-                      <span className="message-card__to">To: {msg.to}</span>
-                    </div>
-                    <div className="message-card__actions">
-                      <span className="message-card__time">{msg.timestamp}</span>
-                      {!msg.isOutgoing && (
-                        <button type="button" className="icon-btn" aria-label="Star">
-                          <Star size={14} />
+                <p>{activeRecord.subject}</p>
+              )}
+              <button
+                type="button"
+                className="icon-btn"
+                aria-label="Edit subject"
+                onClick={() => setEditingSubject(true)}
+              >
+                <Pencil size={14} />
+              </button>
+            </div>
+
+            <div className="conversations__thread" ref={threadRef}>
+              {activeRecord.messages.map((msg) =>
+                msg.isChatBubble ? (
+                  <div
+                    key={msg.id}
+                    className={`chat-bubble ${msg.isOutgoing ? 'chat-bubble--outgoing' : ''}`}
+                  >
+                    {msg.body}
+                  </div>
+                ) : (
+                  <article
+                    key={msg.id}
+                    className={`message-card ${msg.isOutgoing ? 'message-card--outgoing' : ''}`}
+                  >
+                    <header className="message-card__header">
+                      <div>
+                        <strong>{msg.sender}</strong>
+                        <span className="message-card__to">To: {msg.to}</span>
+                      </div>
+                      <div className="message-card__actions">
+                        <span className="message-card__time">{msg.timestamp}</span>
+                        {!msg.isOutgoing && (
+                          <button type="button" className="icon-btn" aria-label="Star">
+                            <Star size={14} />
+                          </button>
+                        )}
+                        <button
+                          type="button"
+                          className="icon-btn"
+                          aria-label="Reply"
+                          onClick={() => replyToMessage(msg.id)}
+                        >
+                          <Reply size={14} />
                         </button>
-                      )}
+                      </div>
+                    </header>
+                    <p className="message-card__body">{msg.body}</p>
+                    {msg.hasAction && msg.actionLabel && (
+                      <button type="button" className="btn btn--primary btn--sm">
+                        {msg.actionLabel}
+                      </button>
+                    )}
+                    {!msg.isOutgoing && (
                       <button
                         type="button"
-                        className="icon-btn"
-                        aria-label="Reply"
+                        className="btn btn--ghost btn--sm message-card__reply"
                         onClick={() => replyToMessage(msg.id)}
                       >
-                        <Reply size={14} />
+                        Reply
                       </button>
-                    </div>
-                  </header>
-                  <p className="message-card__body">{msg.body}</p>
-                  {msg.hasAction && msg.actionLabel && (
-                    <button type="button" className="btn btn--primary btn--sm">
-                      {msg.actionLabel}
-                    </button>
-                  )}
-                  {!msg.isOutgoing && (
-                    <button
-                      type="button"
-                      className="btn btn--ghost btn--sm message-card__reply"
-                      onClick={() => replyToMessage(msg.id)}
-                    >
-                      Reply
-                    </button>
-                  )}
-                </article>
-              ),
+                    )}
+                  </article>
+                ),
+              )}
+            </div>
+
+            {isTyping && (
+              <p className="typing-indicator typing-indicator--live">
+                <span className="typing-dots" />
+                You are typing...
+              </p>
             )}
           </div>
-
-          {isTyping && (
-            <p className="typing-indicator typing-indicator--live">
-              <span className="typing-dots" />
-              You are typing...
-            </p>
-          )}
 
           <div className="message-compose">
             {replyTarget && (
@@ -212,7 +214,6 @@ export function ConversationsPanel({ section }: ConversationsPanelProps) {
                 className="message-compose__textarea"
                 placeholder={`Message ${contactName}...`}
                 value={draft}
-                rows={3}
                 onChange={(e) => handleDraftChange(e.target.value)}
                 onKeyDown={handleKeyDown}
                 onBlur={() => {
@@ -238,7 +239,7 @@ export function ConversationsPanel({ section }: ConversationsPanelProps) {
               </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </section>
   );
