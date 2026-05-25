@@ -1,6 +1,6 @@
 # HighLevel CRM — Dynamic Contact Details Page
 
-A config-driven CRM contact details UI built for the **SDE 3 - CRM - Contacts** take-home assignment. The page layout, field folders, and data are all rendered dynamically from JSON configuration files.
+A config-driven CRM contact details UI built assignment. The page layout, field folders, and data are all rendered dynamically from JSON configuration files.
 
 ## Tech Stack
 
@@ -23,58 +23,15 @@ npm run build    # production build
 npm run preview  # preview production build
 ```
 
-## Deploy to Netlify
-
-This project includes a [`netlify.toml`](netlify.toml) so Netlify picks up the correct build settings automatically.
-
-### Option A — Deploy from GitHub (recommended)
-
-1. Push the repo to GitHub (if you have not already):
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: HighLevel CRM contact details"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/highlevel-crm-dashboard.git
-   git push -u origin main
-   ```
-2. Log in to [Netlify](https://app.netlify.com/) → **Add new site** → **Import an existing project**.
-3. Connect GitHub and select this repository.
-4. Netlify should detect:
-   - **Build command:** `npm run build`
-   - **Publish directory:** `dist`
-5. Click **Deploy site**. No environment variables are required.
-
-After deploy, your site will be live at a URL like `https://random-name.netlify.app`. JSON configs load from `/data/*` (copied from `public/data/` during build).
-
-### Option A — Netlify CLI
-
-```bash
-npm install -g netlify-cli
-npm run build
-netlify deploy --prod
-```
-
-Follow the prompts to link or create a site.
-
-### Local check before deploy
-
-```bash
-npm run build
-npm run preview
-```
-
-Open the preview URL and confirm contacts, conversations, and notes load correctly.
-
 ## Folder Structure
 
 ```
 highlevel-crm-dashboard/
 ├── public/data/           # JSON configs (served as static assets)
 │   ├── layout.json        # Page layout & panel order
-│   ├── layout-alt.json    # Alternate 2-panel layout (bonus toggle)
+│   ├── layout-alt.json    # Alternate 2-panel layout
 │   ├── contactFields.json   # Field folders & types
-│   ├── contacts.json        # Contact profiles (4 contacts)
+│   ├── contacts.json        # Contact profiles 
 │   └── contactRecords.json  # Per-contact notes & conversations
 ├── src/
 │   ├── api/               # Mock API with in-memory cache
@@ -138,11 +95,3 @@ highlevel-crm-dashboard/
 - Panel resize is disabled on mobile (stacked layout)
 - Edits are in-memory only (reset on page refresh)
 
-## Assignment Alignment
-
-Built to match the HighLevel CRM contact details screenshot:
-
-- Left: Contact card, tabs, searchable collapsible field folders
-- Center: Conversations with message cards and compose area
-- Right: Yellow sticky notes
-- Far right: Utility icon sidebar
