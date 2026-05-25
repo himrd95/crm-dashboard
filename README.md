@@ -48,6 +48,38 @@ highlevel-crm-dashboard/
 └── README.md
 ```
 
+## Data flow
+```
+┌─────────────────────────────────────┐
+│   useContactPage() Hook             │
+│   - Loads 4 JSON files              │
+│   - Manages loading/error states    │
+│   - Handles layout switching        │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│   ContactProvider (Context)         │
+│   - State: activeContact, records   │
+│   - Mutations: updateField, etc     │
+│   - Provides to all children        │
+└──────────────┬──────────────────────┘
+               │
+      ┌────────┴────────┐
+      ▼                 ▼
+┌──────────────┐  ┌──────────────────┐
+│ LeftPanel    │  │ CenterPanel      │
+│ - Contacts   │  │ - Conversations  │
+│ - Fields     │  │ - Notes          │
+└──────────────┘  └──────────────────┘
+      │ reads            │ reads
+      │                  │
+      └──────┬───────────┘
+             │
+        Uses useContactContext()
+        to read & mutate state
+```
+
 ## How Each JSON Config Is Used
 
 | File | Purpose |
