@@ -1,0 +1,35 @@
+{
+  "subject": "Set up a new time to follow up on the mail chain issue and confirm delivery status",
+  "messages": [
+    {
+      "id": "msg-1",
+      "sender": "Olivia John",
+      "to": "Me",
+      "timestamp": "5 min ago",
+      "body": "Hi, I wanted to follow up on the mail chain issue we discussed last week. Could we set up a new time to go over the details?",
+      "hasAction": true,
+      "actionLabel": "Track Your Order",
+      "starred": false
+    },
+    {
+      "id": "msg-2",
+      "sender": "You",
+      "to": "Olivia John",
+      "timestamp": "3 min ago",
+      "body": "Of course! I'll check the delivery status and get back to you shortly.",
+      "isOutgoing": true
+    },
+    {
+      "id": "msg-3",
+      "sender": "Olivia John",
+      "to": "Me",
+      "timestamp": "1 min ago",
+      "body": "Please let me know",
+      "isChatBubble": true
+    }
+  ],
+  "typingIndicator": {
+    "user": "Olivia",
+    "active": true
+  }
+}

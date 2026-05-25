@@ -1,0 +1,132 @@
+{
+  "contact-001": {
+    "subject": "Set up a new time to follow up on the mail chain issue and confirm delivery status",
+    "messages": [
+      {
+        "id": "msg-1",
+        "sender": "Olivia John",
+        "to": "Me",
+        "timestamp": "5 min ago",
+        "body": "Hi, I wanted to follow up on the mail chain issue we discussed last week. Could we set up a new time to go over the details?",
+        "hasAction": true,
+        "actionLabel": "Track Your Order"
+      },
+      {
+        "id": "msg-2",
+        "sender": "You",
+        "to": "Olivia John",
+        "timestamp": "3 min ago",
+        "body": "Of course! I'll check the delivery status and get back to you shortly.",
+        "isOutgoing": true
+      },
+      {
+        "id": "msg-3",
+        "sender": "Olivia John",
+        "to": "Me",
+        "timestamp": "1 min ago",
+        "body": "Please let me know",
+        "isChatBubble": true
+      }
+    ],
+    "notes": [
+      {
+        "id": "note-1",
+        "content": "@Aaron Site — Customer called regarding the mail chain issue. Needs a follow-up call scheduled for next week.",
+        "author": "Devon Lane",
+        "createdAt": "2026-05-23T08:30:00Z",
+        "relativeTime": "2 hours ago"
+      },
+      {
+        "id": "note-2",
+        "content": "VIP contact — prioritize responses. Interested in premium package upgrade.",
+        "author": "Blake Reed",
+        "createdAt": "2026-05-22T14:15:00Z",
+        "relativeTime": "1 day ago",
+        "overdue": true
+      }
+    ]
+  },
+  "contact-002": {
+    "subject": "Enterprise demo scheduling for TechFlow Solutions",
+    "messages": [
+      {
+        "id": "msg-m1",
+        "sender": "Marcus Chen",
+        "to": "Me",
+        "timestamp": "20 min ago",
+        "body": "We're ready to move forward with the enterprise package. Can we schedule a demo for our team next Tuesday?",
+        "hasAction": true,
+        "actionLabel": "Schedule Demo"
+      }
+    ],
+    "notes": [
+      {
+        "id": "note-m1",
+        "content": "Decision maker for TechFlow. Budget approved for Q2.",
+        "author": "Sarah Mitchell",
+        "createdAt": "2026-05-23T06:00:00Z",
+        "relativeTime": "4 hours ago"
+      }
+    ]
+  },
+  "contact-003": {
+    "subject": "Electric vehicle inventory inquiry — Bright Auto Group",
+    "messages": [
+      {
+        "id": "msg-e1",
+        "sender": "Elena Rodriguez",
+        "to": "Me",
+        "timestamp": "1 hour ago",
+        "body": "Do you have any electric SUVs available in the Miami area? We're looking to purchase within two weeks.",
+        "starred": true
+      },
+      {
+        "id": "msg-e2",
+        "sender": "You",
+        "to": "Elena Rodriguez",
+        "timestamp": "45 min ago",
+        "body": "Yes! I have three models that match your criteria. I'll send the inventory list shortly.",
+        "isOutgoing": true
+      }
+    ],
+    "notes": [
+      {
+        "id": "note-e1",
+        "content": "High urgency — 14 day timeline. Prefers electric SUV.",
+        "author": "Devon Lane",
+        "createdAt": "2026-05-22T16:00:00Z",
+        "relativeTime": "18 hours ago"
+      },
+      {
+        "id": "note-e2",
+        "content": "Referred by existing VIP client @Aaron Site",
+        "author": "Aaron Site",
+        "createdAt": "2026-05-21T09:00:00Z",
+        "relativeTime": "2 days ago"
+      }
+    ]
+  },
+  "contact-004": {
+    "subject": "Truck fleet quote request — Northline Motors",
+    "messages": [
+      {
+        "id": "msg-j1",
+        "sender": "James Whitaker",
+        "to": "Me",
+        "timestamp": "2 days ago",
+        "body": "Looking for a quote on 5 trucks for our fleet expansion. Please send pricing when available.",
+        "hasAction": true,
+        "actionLabel": "View Quote"
+      }
+    ],
+    "notes": [
+      {
+        "id": "note-j1",
+        "content": "Fleet purchase — long sales cycle expected (~90 days).",
+        "author": "Blake Reed",
+        "createdAt": "2026-05-20T11:00:00Z",
+        "relativeTime": "3 days ago"
+      }
+    ]
+  }
+}

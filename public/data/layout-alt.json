@@ -1,0 +1,35 @@
+{
+  "layoutType": "two-panel",
+  "contactCard": {
+    "showAvatar": true,
+    "showTags": true,
+    "showOwner": true,
+    "showFollowers": false,
+    "showPhoneAction": true
+  },
+  "leftPanel": {
+    "title": "Contact Details",
+    "tabs": [
+      { "id": "allFields", "label": "All Fields" },
+      { "id": "actions", "label": "Actions" }
+    ],
+    "defaultTab": "allFields",
+    "showSearch": true,
+    "sections": [
+      { "type": "fieldsAndFolders" }
+    ]
+  },
+  "centerPanel": {
+    "sections": [
+      { "type": "conversations", "title": "Conversations", "collapsible": false },
+      { "type": "notes", "title": "Notes", "showAddButton": true }
+    ]
+  },
+  "rightPanel": {
+    "sections": []
+  },
+  "utilitySidebar": {
+    "enabled": false,
+    "items": []
+  }
+}

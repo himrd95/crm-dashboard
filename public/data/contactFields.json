@@ -1,0 +1,39 @@
+{
+  "folders": [
+    {
+      "id": "contact",
+      "name": "Contact",
+      "defaultExpanded": true,
+      "fields": [
+        { "key": "firstName", "label": "First Name", "type": "string" },
+        { "key": "lastName", "label": "Last Name", "type": "string" },
+        { "key": "phone", "label": "Phone Number", "type": "phone" },
+        { "key": "email", "label": "Email", "type": "email" },
+        { "key": "address", "label": "Address", "type": "string" }
+      ]
+    },
+    {
+      "id": "additionalInfo",
+      "name": "Additional Info",
+      "defaultExpanded": true,
+      "fields": [
+        { "key": "businessName", "label": "Business Name", "type": "string" },
+        { "key": "streetAddress", "label": "Street Address", "type": "string" },
+        { "key": "city", "label": "City", "type": "string" },
+        { "key": "country", "label": "Country", "type": "radio" },
+        { "key": "owner", "label": "Owner", "type": "user" },
+        { "key": "followers", "label": "Followers", "type": "multi-select" }
+      ]
+    },
+    {
+      "id": "leadPreferences",
+      "name": "Lead Car Buyer Preferences",
+      "defaultExpanded": false,
+      "fields": [
+        { "key": "vehicleType", "label": "Vehicle Type", "type": "string" },
+        { "key": "budget", "label": "Budget", "type": "string" },
+        { "key": "timeline", "label": "Purchase Timeline", "type": "string" }
+      ]
+    }
+  ]
+}

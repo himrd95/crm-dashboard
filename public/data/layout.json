@@ -1,0 +1,42 @@
+{
+  "layoutType": "three-panel",
+  "contactCard": {
+    "showAvatar": true,
+    "showTags": true,
+    "showOwner": true,
+    "showFollowers": true,
+    "showPhoneAction": true
+  },
+  "leftPanel": {
+    "title": "Contact Details",
+    "tabs": [
+      { "id": "allFields", "label": "All Fields" },
+      { "id": "dnd", "label": "DND" },
+      { "id": "actions", "label": "Actions" }
+    ],
+    "defaultTab": "allFields",
+    "showSearch": true,
+    "sections": [
+      { "type": "fieldsAndFolders" }
+    ]
+  },
+  "centerPanel": {
+    "sections": [
+      { "type": "conversations", "title": "Conversations", "collapsible": true }
+    ]
+  },
+  "rightPanel": {
+    "sections": [
+      { "type": "notes", "title": "Notes", "showAddButton": true }
+    ]
+  },
+  "utilitySidebar": {
+    "enabled": true,
+    "items": [
+      { "id": "history", "label": "History", "icon": "history" },
+      { "id": "connections", "label": "Connections", "icon": "users" },
+      { "id": "documents", "label": "Documents", "icon": "file" },
+      { "id": "settings", "label": "Settings", "icon": "settings" }
+    ]
+  }
+}

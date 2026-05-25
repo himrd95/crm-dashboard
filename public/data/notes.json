@@ -1,0 +1,26 @@
+{
+  "notes": [
+    {
+      "id": "note-1",
+      "content": "@Aaron Site — Customer called regarding the mail chain issue. Needs a follow-up call scheduled for next week.",
+      "author": "Devon Lane",
+      "createdAt": "2026-05-23T08:30:00Z",
+      "relativeTime": "2 hours ago"
+    },
+    {
+      "id": "note-2",
+      "content": "VIP contact — prioritize responses. Interested in premium package upgrade.",
+      "author": "Blake Reed",
+      "createdAt": "2026-05-22T14:15:00Z",
+      "relativeTime": "1 day ago",
+      "overdue": true
+    },
+    {
+      "id": "note-3",
+      "content": "Sent product brochure via email. Awaiting confirmation on demo slot.",
+      "author": "Casey Fox",
+      "createdAt": "2026-05-21T10:00:00Z",
+      "relativeTime": "2 days ago"
+    }
+  ]
+}

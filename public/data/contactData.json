@@ -1,0 +1,20 @@
+{
+  "id": "contact-001",
+  "firstName": "Olivia",
+  "lastName": "John",
+  "phone": "(555) 123-4567",
+  "email": "olivia.perry@example.com",
+  "address": "123 Maple Street, Springfield, IL 62704, USA",
+  "businessName": "ABC Corp",
+  "streetAddress": "123 Main Street",
+  "city": "Springfield",
+  "country": "United States",
+  "owner": "Devon Lane",
+  "followers": ["Aaron Site", "Blake Reed", "Casey Fox"],
+  "tags": ["Shared Contact", "VIP", "Hot Lead", "Follow Up", "Newsletter", "Referral", "Priority", "Enterprise", "Demo Scheduled", "Q1 Pipeline", "Inbound", "Outbound", "Retarget", "Webinar", "Trade Show", "Partner"],
+  "vehicleType": "SUV",
+  "budget": "$35,000 - $45,000",
+  "timeline": "Within 30 days",
+  "recordIndex": 1,
+  "recordTotal": 356
+}
